@@ -30,6 +30,7 @@ public class AutoFillAspect {
      * 切入点
      */
 
+    //切入点
     //这个拦截了这个包下的所有方法，但是太多了，只需要拦截加入autofill注解的
     @Pointcut("execution(* com.sky.mapper.*.*(..)) && @annotation(com.sky.annotation.AutoFill)")
     public void autoFillPointCut() {
@@ -55,6 +56,7 @@ public class AutoFillAspect {
             return;
         }
 
+        //数组长度是1，参数是一个employee对象
         Object entity = args[0];
 
         //准备赋值的数据

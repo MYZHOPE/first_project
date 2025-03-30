@@ -10,8 +10,11 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Data
+
 @Builder
+
 @NoArgsConstructor
+//不用自动添加constructor
 @AllArgsConstructor
 public class Employee implements Serializable {
 
